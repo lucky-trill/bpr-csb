@@ -68,7 +68,7 @@
   },
   "url": "https://github.com/lucky-trill/bpr-csb",
   "manifest": "https://github.com/lucky-trill/bpr-csb/releases/latest/download/module.json",
-  "download": "https://github.com/lucky-trill/bpr-csb/releases/download/v1.0.0/module.zip",
+  "download": "https://github.com/lucky-trill/bpr-csb/releases/download/1.0.0/module.zip",
   "license": "https://github.com/lucky-trill/bpr-csb/blob/main/LICENSE",
   "readme": "https://github.com/lucky-trill/bpr-csb/blob/main/README.md",
   "bugs": "https://github.com/lucky-trill/bpr-csb/issues"
