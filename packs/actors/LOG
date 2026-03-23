@@ -1,0 +1,7 @@
+2026/03/22-16:24:18.799 d74 Recovering log #12
+2026/03/22-16:24:18.803 d74 Delete type=0 #12
+2026/03/22-16:24:18.803 d74 Delete type=3 #10
+2026/03/22-16:28:52.325 70bc Level-0 table #17: started
+2026/03/22-16:28:52.333 70bc Level-0 table #17: 75862 bytes OK
+2026/03/22-16:28:52.335 70bc Delete type=0 #15
+2026/03/22-16:28:52.337 70bc Manual compaction at level-0 from '!actors!IYGkzKkKkgF3lwk4' @ 72057594037927935 : 1 .. '!actors!XHhFi2ZKAdhjbo0M' @ 0 : 0; will stop at (end)
