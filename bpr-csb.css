@@ -1,0 +1,1239 @@
+/* Defining Color Variables */
+
+:root {
+  --bp-primary-bg: #fdfdfd;
+  --bp-dark-color: #35396f;
+  --bp-bright-color: #0071bc;
+  --bp-light-color: #3ba9c8;
+  --bp-input-color: #c9e2ec;
+}
+
+/* Importing Fonts */
+
+@font-face {
+  font-family: "Astrohead";
+  src: url("/modules/bpr-csb/fonts/Astrohead.otf");
+}
+
+@font-face {
+  font-family: "Crayon Libre";
+  src: url("/modules/bpr-csb/fonts/CrayonLibre.ttf");
+}
+
+@font-face {
+  font-family: "Grith";
+  src: url("/modules/bpr-csb/fonts/Grith.otf");
+}
+
+@font-face {
+  font-family: "Kepler-452b";
+  src: url("/modules/bpr-csb/fonts/Kepler452b-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Kepler-452b Monospace";
+  src: url("/modules/bpr-csb/fonts/Kepler452b-Mono.ttf");
+}
+
+@font-face {
+  font-family: "No Planet B";
+  src: url("/modules/bpr-csb/fonts/NoPlanetB.otf");
+}
+
+@font-face {
+  font-family: "Reckoner";
+  font-weight: normal;
+  src: url("/modules/bpr-csb/fonts/Reckoner.ttf");
+}
+
+@font-face {
+  font-family: "Reckoner";
+  font-weight: bold;
+  src: url("/modules/bpr-csb/fonts/ReckonerBold.ttf");
+}
+
+@font-face {
+  font-family: "Red Planet";
+  font-weight: normal;
+  src: url("/modules/bpr-csb/fonts/LjPRedPlanet.otf");
+}
+
+@font-face {
+  font-family: "Red Planet";
+  font-weight: bold;
+  src: url("/modules/bpr-csb/fonts/LjPRedPlanetBold.otf");
+}
+
+/* Setting Sheet Colors & Fonts */
+
+.sheet.actor,
+.sheet.item,
+.bpr-dialog {
+  background: var(--bp-primary-bg);
+  color: var(--bp-dark-color);
+  border-color: var(--bp-dark-color);
+  box-shadow: var(--bp-dark-color) 0px 0px 10px;
+}
+
+.sheet.actor .window-content,
+.sheet.item .window-content,
+.bpr-dialog .window-content {
+  scrollbar-color: var(--bp-bright-color) rgba(0, 0, 0, 0);
+}
+
+.sheet.actor .window-content {
+  overflow-y: scroll;
+}
+
+.sheet.actor .window-content,
+.sheet.actor .window-content input,
+.sheet.actor .window-content .custom-system-rich-content,
+.sheet.item .window-content,
+.sheet.item .window-content input,
+.sheet.item .window-content .custom-system-rich-content,
+.bpr-dialog .window-content,
+.bpr-dialog .window-content input {
+  font-family: "Crayon Libre";
+  font-size: 1.05rem;
+  padding: 0px 8px;
+}
+
+.bpr-dialog .window-content select {
+  font-family: "Crayon Libre";
+  font-size: 1.05rem;
+}
+
+.sheet.actor .window-content .custom-system-rich-editor-button {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+
+.sheet.item .window-content .custom-system-rich-editor-button {
+  position: absolute;
+  top: 18px;
+  right: 8px;
+}
+
+.sheet.actor .window-content .custom-system-rich-editor-button-float .sheet.item .window-content .custom-system-rich-editor-button-float {
+  padding: 0px;
+}
+
+.sheet.actor .custom-system-label,
+.sheet.item .custom-system-label {
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+}
+
+.sheet.actor b .custom-system-label,
+.sheet.actor .window-content h4,
+.sheet.actor .window-content label, 
+.sheet.actor .window-content label .sheet.item b .custom-system-label,
+.sheet.item .window-content h4,
+.sheet.item .window-content label,
+.bpr-dialog .window-content h4, 
+.bpr-dialog .window-content label {
+  font-family: "Reckoner", Verdana, Tahoma, sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--bp-bright-color);
+}
+
+.sheet.actor h3 .custom-system-label,
+.sheet.actor .window-content h3,
+.sheet.actor h4 .custom-system-label,
+.sheet.item h3 .custom-system-label,
+.sheet.item .window-content h3,
+.sheet.item h4 .custom-system-label,
+.bpr-dialog .window-content h3 {
+  font-family: "Reckoner", Verdana, Tahoma, sans-serif;
+  font-size: 1.8rem;
+}
+
+.sheet.actor .main-header h3,
+.sheet.actor .window-content h1,
+.sheet.actor .window-content h1 input,
+.sheet.item .main-header h3,
+.sheet.item .window-content h1,
+.sheet.item .window-content h1 input,
+.bpr-dialog .main-header h3,
+.bpr-dialog .window-content h1,
+.bpr-dialog .window-content h1 input {
+  font-family: "No Planet B", 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+
+.sheet.actor .window-header,
+.sheet.item .window-header,
+.bpr-dialog .window-header {
+  background: var(--bp-dark-color);
+  color: var(--bp-primary-bg);
+}
+
+.sheet.actor .custom-system-label-root,
+.sheet.item .custom-system-label-root {
+  text-transform: uppercase;
+  color: var(--bp-bright-color);
+}
+
+.sheet.actor table,
+.sheet.actor table tr,
+.sheet.item table,
+.sheet.item table tr {
+  background: var(--bp-primary-bg);
+}
+
+.sheet.actor .window-content,
+.sheet.item .window-content {
+  margin: 16px;
+  border: 8px solid var(--bp-dark-color);
+  padding: 0px;
+}
+
+.bpr-dialog .window-content {
+  margin: 8px;
+  border: 8px solid var(--bp-dark-color);
+  padding: 8px;
+}
+
+.sheet.actor .window-content .profile-img-container,
+.sheet.item .window-content .profile-img-container {
+  align-self: flex-start;
+  background: var(--bp-input-color);
+  margin: 7px 0px 0px 7px;
+}
+
+.sheet.actor a.button,
+.sheet.item a.button,
+.bpr-dialog .window-content button {
+  border: none;
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  background: rgba(53, 57, 111, .5);
+  text-transform: uppercase;
+  color: var(--bp-primary-bg);
+}
+
+.sheet.actor a.button:hover,
+.sheet.item a.button:hover,
+.bpr-dialog .window-content button:hover {
+  background: var(--bp-bright-color);
+}
+
+.sheet.actor a.button:focus,
+.sheet.item a.button:focus,
+.bpr-dialog .window-content button:focus {
+  outline: 1px solid var(--bp-bright-color);
+}
+
+.sheet.actor .tags input[type="text"],
+.sheet.actor .tracks input[type="text"],
+.sheet.actor .standalone-table input[type="text"],
+.sheet.item .tags input[type="text"],
+.sheet.item .tracks input[type="text"],
+.sheet.item .standalone-table input[type="text"] {
+  border-bottom: 2px solid var(--bp-bright-color);
+}
+
+/* Hiding CSB & Coloring Controls */
+
+.sheet.actor:not(._template) .header-fields:hover .custom-system-sheet-actions,
+.sheet.item:not(._template) .header-fields:hover .custom-system-sheet-actions {
+  display: flex;
+}
+
+.sheet.actor:not(._template) .header-fields .custom-system-sheet-actions label,
+.sheet.item:not(._template) .header-fields .custom-system-sheet-actions label,
+.sheet.actor:not(._template) .header-fields .custom-system-sheet-actions div,
+.sheet.item:not(._template) .header-fields .custom-system-sheet-actions div {
+  background-color: var(--bp-input-color);
+}
+
+.sheet.actor .header-fields .custom-system-template-select select,
+.sheet.item .header-fields .custom-system-template-select select {
+  background: var(--bp-primary-bg);
+}
+
+.sheet.actor:not(._template) .header-fields .custom-system-sheet-actions,
+.sheet.item:not(._template) .header-fields .custom-system-sheet-actions {
+  margin: -48px 20px 0px 0px;
+  display: none;
+}
+
+.sheet.item label:has(.custom-system-item-unique) {
+  display: none;
+}
+
+/* Formating Tabs */
+
+.sheet.actor .custom-tabs {
+  border-width: 0px;
+  padding: 0px;
+  margin: 4px 0px 10px 0px;
+  justify-content: flex-start;
+  font-size: 0px;
+}
+
+.sheet.actor .custom-tabs span {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+}
+
+.sheet.actor .custom-tabs a {
+  text-transform: uppercase;
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: var(--bp-input-color);
+  text-shadow: 1px 1px 2px var(--bp-bright-color);
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  border-width: 2px 0px;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.sheet.actor .custom-tabs a.active {
+  border-color: var(--bp-bright-color);
+}
+
+/* Shaping Sheet Elements */
+
+.sheet.actor .header-fields .charname,
+.sheet.item .header-fields .itemname {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.actor .header-fields .charname input,
+.sheet.item .header-fields .itemname input {
+  padding-top: 5px;
+}
+
+.sheet.actor:not(._template) .header-fields,
+.sheet.item:not(._template) .header-fields {
+  height: 64px;
+}
+
+.sheet.actor input[type="text"],
+.sheet.actor select,
+.sheet.actor .window-content .custom-system-rich-content,
+.sheet.item input[type="text"],
+.sheet.item select,
+.sheet.item .window-content .custom-system-rich-content,
+.bpr-dialog input[type="text"],
+.bpr-dialog input[type="number"],
+.bpr-dialog select {
+  background: var(--bp-input-color);
+  color: var(--bp-dark-color);
+  border-bottom: 2px solid var(--bp-dark-color);
+  border-radius: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.sheet.actor td div,
+.sheet.item td div {
+  margin: 0px 3px 0px 0px;
+  padding: 0px;
+}
+
+.sheet.actor input[type="checkbox"],
+.sheet.actor input[type="radio"],
+.bpr-dialog input[type="checkbox"] {
+  padding: 0px;
+  margin: 1px 0px 1px -2px;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+
+.sheet.actor input[type="checkbox"]:not(:checked),
+.sheet.actor input[type="radio"]:not(:checked),
+.bpr-dialog input[type="checkbox"]:not(:checked) {
+  padding: 1px 0px 1px 0px;
+}
+
+.sheet.actor input[type="checkbox"]::before,
+.sheet.actor input[type="radio"]::before,
+.bpr-dialog input[type="checkbox"]::before {
+  border: 3px solid var(--bp-dark-color);
+  border-radius: 50%;
+  color: var(--bp-primary-bg);
+  padding: 0px;
+  font-size: 14px;
+  content: "\f111";
+}
+
+.sheet.actor input[type="checkbox"]:checked::after,
+.sheet.actor input[type="radio"]:checked::after,
+.bpr-dialog input[type="checkbox"]:checked::after {
+  color: var(--bp-dark-color);
+  content: "\f111\f111";
+  margin: -1px 0px 0px 0px;
+}
+
+.sheet.actor .bright input[type="checkbox"]::before,
+.sheet.actor .bright input[type="radio"]::before {
+  border: 3px solid var(--bp-bright-color);
+}
+
+.sheet.actor .bright input[type="checkbox"]:checked::after,
+.sheet.actor .bright input[type="radio"]:checked::after {
+  color: var(--bp-bright-color);
+}
+
+.sheet.actor input[type="radio"]::before {
+  border: 3px solid var(--bp-bright-color);
+}
+
+.sheet.actor input[type="radio"]:checked::after {
+  color: var(--bp-bright-color);
+}
+
+/* Shaping Header, Chips, & Reputation Tables */
+
+.sheet.actor td:has(.colspan2) {
+  width: 50%;
+}
+
+.sheet.actor td:has(.colspan3) {
+  width: 66%;
+}
+
+.sheet.actor .details-table table,
+.sheet.actor .details-table table td {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.actor .details-table .custom-system-rich-content {
+  height: 90px;
+  overflow: auto;
+  scrollbar-color: var(--bp-bright-color) rgba(0, 0, 0, 0);
+  overflow-y: scroll;
+}
+
+.sheet.actor .details-table .custom-system-rich-content p {
+  margin-top: 0px;
+}
+
+.sheet.actor .chips td,
+.sheet.actor .rep td {
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.sheet.actor .chips tr:first-child td:not(:first-child) div:not(.blank),
+.sheet.actor .chips tr:nth-child(2) td div:not(.divider),
+.sheet.actor .chips tr:nth-child(3) td:not(:first-child) div:not(.divider),
+.sheet.actor .rep tr:nth-child(2) td:not(:first-child) div:not(.divider) {
+  width: 14px;
+  line-height: 0%;
+  vertical-align: top;
+}
+
+.sheet.actor .chips tr:first-child td:not(:first-child) .custom-system-label {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 5px 0px 0px -5px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sheet.actor .chips td:not(:first-child) div.divider,
+.sheet.actor .rep td:not(:first-child) div.divider,
+.sheet.actor .chips td:not(:first-child) div.blank {
+  width: 2px;
+  height: 16px;
+  padding: 0px;
+  margin: 4px 5px 0px 3px;
+  content: '';
+  border-radius: 1px;
+  text-align: center;
+}
+
+.sheet.actor .chips td:not(:first-child) div.divider,
+.sheet.actor .rep td:not(:first-child) div.divider {
+  background: var(--bp-bright-color);
+}
+
+.sheet.actor .chips td:not(:first-child) div.divider span,
+.sheet.actor .rep td:not(:first-child) div.divider span {
+  display: none;
+}
+
+.sheet.actor .chips .chips-definition .custom-system-label {
+  font-size: 0.7rem;
+}
+
+.sheet.actor .chips tr:first-child td:first-child.custom-system-cell-alignLeft>.custom-system-field .custom-system-label-root {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.actor .chips tr:first-child td:first-child {
+  vertical-align: bottom;
+}
+
+.sheet.actor .rep tr:nth-child(1) span.custom-system-label-root {
+  color: var(--bp-input-color);
+  text-shadow: 1px 1px 2px var(--bp-bright-color);
+  font-size: 1rem;
+  vertical-align: top;
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.sheet.actor .rep tr:nth-child(2) {
+  height: 38px;
+}
+
+.sheet.actor .rep tr:nth-child(1) td:has(span.custom-system-label-root):nth-child(1) {
+  border-bottom: 2px solid var(--bp-dark-color);
+}
+
+.sheet.actor .rep tr:nth-child(1) td:has(span.custom-system-label-root):nth-child(2) {
+  border-bottom: 4px solid var(--bp-dark-color);
+}
+
+.sheet.actor .rep tr:nth-child(1) td:has(span.custom-system-label-root):nth-child(3) {
+  border-bottom: 6px solid var(--bp-dark-color);
+}
+
+.sheet.actor .rep tr:nth-child(1) td:has(span.custom-system-label-root):nth-child(4) {
+  border-bottom: 8px solid var(--bp-dark-color);
+}
+
+.sheet.actor .rep tr:nth-child(1) td:has(span.custom-system-label-root):nth-child(5) {
+  border-bottom: 10px solid var(--bp-dark-color);
+}
+
+/* Attribute & Skill Set Table */
+
+.sheet.actor .page-table td:first-child:has(table) {
+  background-color: var(--bp-light-color);
+}
+
+.sheet.actor .page-table td:nth-child(2):has(table) {
+  border-left: 16px solid var(--bp-light-color);
+}
+
+.sheet.actor .page-table td:nth-child(2):has(table) table tr:not(:first-child) td:first-child {
+  padding-left: 2px;
+}
+
+.sheet.actor .page-table table,
+.sheet.actor .page-table table td,
+.sheet.actor .page-table table div {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet.actor .page-table table table td,
+.sheet.actor .page-table table table div {
+  padding: 2px;
+  margin: 2px;
+}
+
+.sheet.actor .page-table table tr td {
+  vertical-align: top;
+}
+
+.sheet.actor .page-table table table tr:first-child,
+.sheet.actor .page-table table table tr:first-child td,
+.sheet.actor .standalone-table table tr:first-child,
+.sheet.actor .standalone-table table tr:first-child td {
+  background: var(--bp-light-color);
+  padding: 0px 2px;
+}
+
+.sheet.actor .page-table table table tr:first-child,
+.sheet.actor .standalone-table tr:first-child {
+  height: 56px;
+}
+
+.sheet.actor .page-table table table tr:first-child .custom-system-label h3,
+.sheet.actor .page-table table table tr:first-child .custom-system-label a,
+.sheet.actor .standalone-table table tr:first-child .custom-system-label h3,
+.sheet.actor .standalone-table table tr:first-child .custom-system-label a {
+  color: var(--bp-primary-bg);
+  display: inline-block;
+}
+
+.sheet.actor .page-table table table tr:first-child td,
+.sheet.actor .standalone-table tr:first-child td {
+  vertical-align: middle;
+}
+
+.sheet.actor .page-table td:nth-child(2) table tr:first-child div,
+.sheet.actor .standalone-table tr:first-child div {
+  justify-content: flex-end;
+}
+
+.sheet.actor .page-table table table tr:first-child h3,
+.sheet.actor .standalone-table tr:first-child h3 {
+  margin: 0px;
+  padding: 5px 0px 0px 0px;
+}
+
+.sheet.actor .page-table h3,
+.sheet.actor .standalone-table h3 {
+  display: inline-block;
+}
+
+.sheet.actor .page-table a.button {
+  display: inline-block;
+  padding: 5px 0px;
+  width: 150px;
+  height: 40px;
+  line-height: 15px;
+  margin: 0px 20px 0px 0px;
+}
+
+.sheet.actor .page-table .injury a.button {
+  width: 250px;
+}
+
+.sheet.actor .page-table table td:first-child table a.button {
+  margin: 0px 0px 0px 20px;
+}
+
+.sheet.actor .attributes table,
+.sheet.actor .skills table {
+  height: 790px;
+}
+
+.sheet.actor .attributes table,
+.sheet.actor .strain table,
+.sheet.actor .injury table {
+  width: 388px;
+}
+
+.sheet.actor .attributes tr:not(:first-child) td:has(h3) {
+  border-bottom: 4px solid var(--bp-bright-color);
+}
+
+.sheet.actor .page-table h3 {
+  color: var(--bp-dark-color);
+}
+
+.sheet.actor .attributes tr:not(:first-child) td:has(h3) div,
+.sheet.actor .attributes tr:not(:first-child) td .dark-circle div {
+  height: 20px;
+}
+
+.sheet.actor .attributes tr:not(:first-child) td:has(h3),
+.sheet.actor .attributes tr:not(:first-child) td:has(.bright-circle) {
+  padding-top: 30px;
+}
+
+.sheet.actor .attributes tr:nth-child(3) td,
+.sheet.actor .attributes tr:nth-child(6) td,
+.sheet.actor .attributes tr:nth-child(9) td,
+.sheet.actor .attributes tr:nth-child(12) td {
+  padding-top: 15px;
+}
+
+.sheet.actor .attributes .bright-circle {
+  height: 10px;
+  width: 60px;
+  margin: 5px 0px 0px -35px;
+}
+
+.sheet.actor .attributes .bright-circle-small {
+  height: 10px;
+  width: 40px;
+  margin: 40px 10px 0px -30px;
+}
+
+.sheet.actor .attributes .dark-circle-small {
+  width: 40px;
+  margin: -4px 0px 0px -20px;
+}
+
+.sheet.actor .skills tr:not(:first-child) td:has(.custom-system-label),
+.sheet.actor .skills tr:not(:first-child) div:has(.custom-system-label),
+.sheet.actor .skills tr:not(:first-child) .custom-system-label {
+  padding: 2px 0px;
+  margin: 0px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.sheet.actor .dropline,
+.sheet.actor .upline {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: var(--bp-bright-color);
+  vertical-align: bottom;
+  margin: 0px 4px 0px 8px;
+  padding: 0px;
+  vertical-align: bottom;
+}
+
+.sheet.actor .skills .upline {
+  border-width: 0px 0px 1px 1px;
+  vertical-align: top;
+}
+
+.sheet.actor .custom-system-label span:nth-child(2) {
+  font-size: 1rem;
+  line-height: 250%;
+}
+
+.sheet.actor .skills td:nth-child(3) .dropline {
+  border-width: 2px 0px 0px 2px;
+}
+
+.sheet.actor .skills td:nth-child(4) .dropline {
+  border-width: 3px 0px 0px 3px;
+}
+
+.sheet.actor .skills td:nth-child(3) .upline {
+  border-width: 0px 0px 2px 2px;
+}
+
+.sheet.actor .skills td:nth-child(4) .upline {
+  border-width: 0px 0px 3px 3px;
+}
+
+.sheet.actor .skills input {
+  margin: 0px;
+}
+
+.sheet.actor .skills tr:nth-child(3) input,
+.sheet.actor .skills tr:nth-child(4) input,
+.sheet.actor .skills tr:nth-child(5) input,
+.sheet.actor .skills tr:nth-child(6) input,
+.sheet.actor .skills tr:nth-child(7) input {
+  border-color: var(--bp-bright-color);
+}
+
+.sheet.actor .skills td:nth-child(3) input {
+  border-width: 0px 0px 4px 0px;
+}
+
+.sheet.actor .skills td:nth-child(4) input {
+  border-width: 0px 0px 6px 0px;
+}
+
+
+.sheet.actor .skills td:not(:first-child) input {
+  padding-left: 15px;
+}
+
+.sheet.actor .skills td:not(:first-child):has(input),
+.sheet.actor .skills td:not(:first-child):has(input) div {
+  padding: 0px;
+  margin: 0px;
+  z-index: 1;
+}
+
+.sheet.actor .skills td:first-child:has(input),
+.sheet.actor .skills td:first-child:has(input) div {
+  padding: 0px;
+  margin: -5px -8px 0px 5px;
+  z-index: 2;
+}
+
+/* Strain & Tags Tables */
+
+.sheet.actor .strain table,
+.sheet.actor .tags table {
+  height: 340px;
+}
+
+.sheet.actor .page-table .strain tr:not(:first-child) td {
+  vertical-align: bottom;
+  position: relative;
+  top: 1px;
+  padding: 0px 0px 55px 0px;
+}
+
+.sheet.actor .page-table .strain tr:not(:first-child) td:first-child {
+  position: relative;
+  left: 0px;
+  top: 21px;
+}
+
+.sheet.actor .page-table .strain tr:not(:first-child) td:nth-child(2) {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+.sheet.actor .page-table .strain input[type="checkbox"] {
+  transform: scale(1.6);
+  padding: 0px 5px;
+}
+
+.sheet.actor .page-table .strain input[type="checkbox"]:checked {
+  top: 2px;
+}
+
+.sheet.actor .page-table .strain h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet.actor .line-holder {
+  width: 0px;
+  height: 0px;
+  overflow: visible;
+  position: relative;
+  top: -10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.actor .strain .line-holder {
+  left: -20px;
+}
+
+.sheet.actor .line {
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 4px solid var(--bp-bright-color);
+}
+
+.sheet.actor .line1 {
+  width: 280px;
+}
+
+.sheet.actor .line2 {
+  width: 300px;
+}
+
+/* Injury & Tracks Tables */
+
+.sheet.actor .injury table,
+.sheet.actor .tracks table {
+  height: 340px;
+}
+
+.sheet.actor .page-table .injury tr:not(:first-child) td {
+  vertical-align: bottom;
+  position: relative;
+  top: 1px;
+  padding: 0px 0px 20px 0px;
+}
+
+.sheet.actor .page-table .injury tr:not(:first-child) td:first-child {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+.sheet.actor .page-table .tracks tr:not(:first-child) td:first-child,
+.sheet.actor .page-table .tracks tr:not(:first-child) td:nth-child(3),
+.sheet.actor .page-table .tracks tr:not(:first-child) td:nth-child(5) {
+  vertical-align: bottom;
+  padding: 0px 0px 5px 0px;
+}
+
+.sheet.actor .page-table .injury input[type="checkbox"] {
+  transform: scale(1.6);
+  padding: 0px 5px;
+}
+
+.sheet.actor .page-table .injury input[type="checkbox"]:checked {
+  top: 2px;
+}
+
+.sheet.actor .page-table .injury h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet.actor .tracks td:last-child,
+.sheet.actor .tracks td:last-child div {
+  padding: 0px;
+  margin: 0px 0px 1px 0px;
+  vertical-align: middle;
+}
+
+.sheet.actor .triangle input::before {
+  border-radius: 0px;
+  border-style: dotted dotted solid dotted;
+}
+
+.sheet.actor .triangle-down input::before {
+  border-radius: 0px;
+  border-style: solid dotted dotted dotted;
+}
+
+.sheet.actor .track-num .custom-system-label {
+  font-weight: 100;
+  color: var(--bp-dark-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.actor .injury tr:not(:first-child) td:first-child {
+  padding-left: 50px;
+}
+
+.sheet.actor .injury tr:not(:first-child) td:last-child {
+  padding-right: 50px;
+}
+
+.sheet.actor .injury .line-holder {
+  left: -10px;
+}
+
+.sheet.actor .line3 {
+  width: 270px;
+}
+
+.sheet.actor .line4 {
+  width: 235px;
+}
+
+.sheet.actor .line5 {
+  width: 200px;
+}
+
+/* Ties Table */
+
+.sheet.actor .standalone-table {
+  margin-top: -10px;
+}
+
+.sheet.actor .standalone-table tr:not(:first-child) td,
+.sheet.actor .standalone-table tr:not(:first-child) td div .sheet.actor .standalone-table tr:not(:first-child) td input {
+  vertical-align: bottom;
+}
+
+.sheet.actor .standalone-table tr:not(:first-child):not(:nth-child(2)) td div,
+.sheet.actor .standalone-table tr:not(:first-child):not(:nth-child(2)) td input {
+  display: inline-block;
+}
+
+.sheet.actor .standalone-table tr:not(:first-child) td:first-child {
+  padding-left: 12px;
+}
+
+.sheet.actor .standalone-table input[type="checkbox"] {
+  transform: scale(1.9);
+  position: relative;
+  left: -12px;
+  top: -5px;
+}
+
+.sheet.actor .standalone-table input[type="checkbox"]:checked {
+  top: -3px;
+}
+
+/* Maneuvers & Item Tables */
+
+.sheet.actor table:has(.maneuver-left) {
+  margin-bottom: 20px;
+  overflow: visible;
+  width: 100%;
+}
+
+.sheet.actor table:has(.maneuver-left) tr,
+.sheet.actor table:has(.maneuver-left) td,
+.sheet.actor table:has(.maneuver-left) h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.sheet.actor td:has(.maneuver-left),
+.sheet.actor td:has(.maneuver-right) {
+  position: relative;
+  top: -7px;
+}
+
+.sheet.actor td:has(.maneuver-left),
+.sheet.actor .maneuver-left,
+.sheet.actor .maneuver-left span,
+.sheet.actor td:has(.maneuver-right),
+.sheet.actor .maneuver-right,
+.sheet.actor .maneuver-right span {
+  margin: 0px;
+  padding: 0px;
+  height: 37px;
+}
+
+.sheet.actor .maneuver-left .custom-system-label,
+.sheet.actor .maneuver-right .custom-system-label {
+  font-size: 1rem;
+  font-family: "Reckoner", Verdana, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: var(--bp-dark-color);
+  border-bottom: 4px solid var(--bp-bright-color);
+  width: 110px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.sheet.actor .maneuver-left .custom-system-label i,
+.sheet.actor .maneuver-right .custom-system-label i {
+  color: var(--bp-bright-color);
+  font-size: 50px;
+  position: relative;
+  top: 27px;
+}
+
+.sheet.actor .maneuver-left .custom-system-label i {
+  left: 3px;
+}
+
+.sheet.actor .maneuver-right .custom-system-label i {
+  left: -3px;
+}
+
+.sheet.actor td:has(.maneuver-left),
+.sheet.actor .maneuver-left,
+.sheet.actor .maneuver-left span {
+  text-align: right;
+  justify-content: end;
+}
+
+.sheet.actor td:has(.maneuver-right),
+.sheet.actor .maneuver-right,
+.sheet.actor .maneuver-right span {
+  text-align: left;
+  justify-content: start;
+}
+
+.sheet.actor .item-display table tr:first-child,
+.sheet.actor .item-display table tr:first-child td {
+  background: var(--bp-primary-bg);
+  color: var(--bp-bright-color);
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 100;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.sheet.actor .item-display table {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet.actor .standalone-table:has(.item-display),
+.sheet.actor .standalone-table:has(.item-display) tr:not(:first-child),
+.sheet.actor .standalone-table:has(.item-display) tr:not(:first-child) td {
+  padding: 0px;
+  margin: 0px;
+}
+
+.sheet.actor .item-display table tr:first-child div {
+  justify-content: flex-start;
+}
+
+.sheet.actor .item-display table tr:first-child td {
+  position: relative;
+  top: -10px;
+}
+
+.sheet.actor .item-display table tr:first-child span:not(:first-child),
+.sheet.actor .item-display table tr:first-child i:not(:first-child) {
+  position: relative;
+  top: -9px;
+}
+
+.sheet.actor .item-display tr:not(:first-child) td span,
+.sheet.actor .item-display tr:not(:first-child) td div {
+  display: inline-block;
+  font-family: "Crayon Libre";
+  font-size: 1.05rem;
+  text-transform: none;
+  text-align: left;
+  margin: 0px;
+  line-height: 30px;
+}
+
+.sheet.actor .item-display tr:not(:first-child) td.custom-system-cell span {
+  display: inline-block;
+  background-color: var(--bp-input-color);
+  color: var(--bp-dark-color);
+  border-bottom: 2px solid var(--bp-bright-color);
+  border-width: 0px 0px 2px 0px;
+  margin: 0px 1% 5px 0px;
+  width: 99%;
+}
+
+.sheet.actor .item-display tr:not(:first-child) td.custom-system-cell a {
+  background: none;
+  color: var(--bp-dark-color);
+  border-width: 0px;
+}
+
+.sheet.actor a:hover,
+.sheet.item a:hover {
+  text-shadow: 1px 1px 2px var(--bp-bright-color);
+}
+
+.sheet.actor .item-display tr:not(:first-child) td.custom-system-cell .custom-system-item-container-image {
+  max-width: 32px;
+  max-height: 32px;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  left: -5px;
+  margin-bottom: -4px;
+  top: -2px;
+  background-color: var(--bp-input-color);
+}
+
+.sheet.actor .item-display td:has(.custom-system-dynamic-table-row-icons) {
+  width: 40px;
+}
+
+.sheet.actor .item-display td:has(.custom-system-dynamic-table-row-icons) div {
+  height: 30px;
+  overflow: hidden;
+}
+
+.sheet.actor .item-display .custom-system-dynamic-table-row-icons span {
+  display: inline-block;
+  width: 20px;
+}
+
+.sheet.actor .item-display .custom-system-label {
+  padding-left: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 22px;
+  width: calc(99%);
+}
+
+.sheet.actor .standalone-table tr:not(:first-child) td:first-child:has(.custom-system-rich-content) {
+  padding: 8px 0px 0px 2px;
+  margin: 10px 0px 0px 0px;
+}
+
+/* Item Sheets */
+
+.sheet.item input,
+.sheet.item label,
+.sheet.item .custom-system-rich-content {
+  text-align: left;
+}
+
+.sheet.item .custom-system-component-contents input,
+.sheet.item .custom-system-component-contents div:has(.custom-system-rich-content) {
+  margin-right: 2px;
+}
+
+.sheet.item .custom-system-component-contents:not(:first-child) label,
+.sheet.item .custom-system-component-contents:not(:first-child) input,
+.sheet.item .custom-system-rich-content {
+  margin-top: 10px;
+}
+
+.sheet.item label {
+  min-width: 210px;
+  padding-left: 10px;
+}
+
+.sheet.actor .window-content .standalone-table .custom-system-rich-content,
+.sheet.item .window-content .custom-system-rich-content {
+  font-family: "Signika", Arial, Helvetica, sans-serif;
+  min-height: 140px;
+  padding: 1px 10px;
+}
+
+.sheet.item .custom-system-field-root {
+  margin-left: 0px;
+}
+
+/* Dialogs & Rolls */
+
+.bpr-dialog label {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+}
+
+.bpr-dialog .dialog-field {
+  padding: 0px 1% 0px 4%;
+}
+
+.bpr-dialog .dialog-field label {
+  width: 29%;
+  text-align: left;
+}
+
+.bpr-dialog .dialog-field select,
+.bpr-dialog .dialog-field input {
+  width: 66%;
+}
+
+.bpr-dialog input[type="checkbox"] {
+  text-align: right;
+}
+
+.bpr-roll-flavor {
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.bpr-roll-flavor strong {
+  text-transform: uppercase;
+  font-family: "Reckoner", Verdana, Tahoma, sans-serif;
+}
+
+.bpr-roll-flavor h3 {
+  font-family: "No Planet B", 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Number Circles */
+
+.sheet.actor .dark-circle input,
+.sheet.actor .dark-circle-small input {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid var(--bp-dark-color);
+  background: var(--bp-primary-bg);
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--bp-dark-color);
+  padding: 0px;
+}
+
+.sheet.actor .bright-circle input,
+.sheet.actor .bright-circle-small input,
+.bpr-dialog .bright-circle input,
+.bpr-dialog .bright-circle-small input {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid var(--bp-bright-color);
+  background: var(--bp-primary-bg);
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--bp-bright-color);
+  padding: 0px;
+}
+
+.sheet.actor .dark-circle-small input,
+.sheet.actor .bright-circle-small input {
+  width: 44px;
+  height: 44px;
+  font-size: 1.05rem;
+}
